@@ -1,0 +1,720 @@
+/* ============================================================
+   Tokens
+   ============================================================ */
+:root {
+  --pink-lightest: #FFF0F5;
+  --pink-pale: #FFD1DC;
+  --pink-main: #FFB6C1;
+  --pink-deep: #F5849C;
+  --lavender: #C9B6E8;
+  --lavender-deep: #9B7FC7;
+  --white: #FFFFFF;
+  --ink: #4A2E44;
+  --ink-soft: #8A6E86;
+  --ink-faint: #B79DB3;
+  --line: #F1D9E2;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Quicksand", "Trebuchet MS", sans-serif;
+
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  --shadow-soft: 0 18px 40px -20px rgba(155, 127, 199, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--pink-lightest);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+p { margin: 0; line-height: 1.6; }
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  color: var(--lavender-deep);
+  margin-bottom: 14px;
+}
+
+.section-heading {
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.15;
+  max-width: 640px;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  max-width: 520px;
+  color: var(--ink-soft);
+  font-size: 17px;
+}
+
+.section-head-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   Nav
+   ============================================================ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 240, 245, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--lavender-deep);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  padding: 88px 0 96px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.hero::before {
+  width: 380px;
+  height: 380px;
+  background: var(--pink-pale);
+  top: -160px;
+  left: -120px;
+}
+
+.hero::after {
+  width: 300px;
+  height: 300px;
+  background: var(--lavender);
+  opacity: 0.3;
+  bottom: -140px;
+  right: -100px;
+}
+
+.hero .wrap { position: relative; z-index: 1; }
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+
+.hero-pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pink-deep);
+}
+
+.hero h1 {
+  font-size: clamp(44px, 7vw, 84px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--pink-deep);
+}
+
+.hero-tagline {
+  max-width: 520px;
+  margin: 22px auto 0;
+  color: var(--ink-soft);
+  font-size: 18px;
+}
+
+.counter-block {
+  margin: 56px auto 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 48px;
+  box-shadow: var(--shadow-soft);
+}
+
+.counter-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.counter-number {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 600;
+  color: var(--pink-deep);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.counter-divider {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--ink-faint);
+  line-height: 1;
+  transform: translateY(-6px);
+}
+
+.counter-label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.counter-caption {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.hero-dates {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.hero-dates span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--lavender-deep);
+  background: var(--pink-lightest);
+  border: 1px solid var(--line);
+  padding: 7px 16px;
+  border-radius: 999px;
+}
+
+/* ============================================================
+   About
+   ============================================================ */
+.about {
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about-card {
+  background: var(--pink-lightest);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  border: 1px solid var(--line);
+}
+
+.about-card .card-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--lavender-deep);
+  margin-bottom: 10px;
+}
+
+.about-card .card-date {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.about-card p {
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.about-breakdown {
+  margin-top: 40px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  background: var(--pink-lightest);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  border: 1px solid var(--line);
+}
+
+.breakdown-item {
+  text-align: center;
+  flex: 1;
+  min-width: 90px;
+}
+
+.breakdown-item .num {
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--pink-deep);
+  display: block;
+}
+
+.breakdown-item .label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   Trips
+   ============================================================ */
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.trip-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+  background-color: var(--pink-pale);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.trip-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(74,46,68,0.78) 0%, rgba(74,46,68,0.25) 55%, rgba(74,46,68,0.1) 100%);
+  z-index: 0;
+  transition: opacity 0.35s ease;
+}
+
+.trip-card .city-name {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  font-size: 28px;
+  text-shadow: 0 2px 12px rgba(74, 46, 68, 0.6);
+  transition: transform 0.35s ease;
+}
+
+.trip-card .view-link {
+  position: relative;
+  z-index: 1;
+  display: block;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(74, 46, 68, 0.7);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: 6px;
+}
+
+.trip-card:hover .city-name,
+.trip-card:focus-visible .city-name {
+  transform: translateY(-8px);
+}
+
+.trip-card:hover .view-link,
+.trip-card:focus-visible .view-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trip-card:hover,
+.trip-card:focus-visible {
+  outline: none;
+}
+
+.trip-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  transition: border-color 0.35s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.trip-card:hover::after,
+.trip-card:focus-visible::after {
+  border-color: var(--white);
+}
+
+.trip-card.austin { background-image: url("images/covers/austin.jpg"); }
+.trip-card.newyork { background-image: url("images/covers/new-york.jpg"); }
+.trip-card.sanantonio { background-image: url("images/covers/san-antonio.jpg"); }
+.trip-card.hawaii { background-image: url("images/covers/hawaii.jpg"); }
+
+/* ============================================================
+   Bucket List
+   ============================================================ */
+.bucket {
+  background: var(--white);
+}
+
+.bucket-progress {
+  margin-bottom: 48px;
+}
+
+.bucket-progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--pink-lightest);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.bucket-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pink-deep), var(--lavender-deep));
+  border-radius: 999px;
+}
+
+.bucket-progress-label {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.bucket-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bucket-col h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.bucket-col.done h3 { color: var(--pink-deep); }
+.bucket-col.todo h3 { color: var(--lavender-deep); }
+
+.bucket-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bucket-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.bucket-list .mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+.bucket-col.done .mark {
+  background: var(--pink-deep);
+  color: var(--white);
+}
+
+.bucket-col.done li span.text { color: var(--ink); }
+
+.bucket-col.todo .mark {
+  border: 2px solid var(--ink-faint);
+  background: transparent;
+}
+
+.bucket-col.todo li span.text { color: var(--ink-soft); }
+
+/* ============================================================
+   Family / Memories placeholders
+   ============================================================ */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.photo-grid.pets {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.photo-slot {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  border: 2px dashed var(--pink-main);
+  background: var(--pink-lightest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-faint);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+}
+
+.photo-grid.filled {
+  grid-auto-rows: 1fr;
+}
+
+.photo-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: block;
+  background: var(--pink-lightest);
+  box-shadow: var(--shadow-soft);
+}
+
+.photo-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.photo-tile:hover img,
+.photo-tile:focus-visible img {
+  transform: scale(1.06);
+}
+
+.family {
+  background: var(--pink-lightest);
+}
+
+.family .photo-slot,
+.family .photo-slot {
+  background: var(--white);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer .heart { color: var(--pink-deep); }
+
+/* ============================================================
+   Trip detail pages
+   ============================================================ */
+.trip-hero {
+  padding: 70px 0 60px;
+  text-align: center;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.trip-hero .back-link {
+  display: inline-block;
+  margin-bottom: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--lavender-deep);
+}
+
+.trip-hero h1 {
+  font-size: clamp(40px, 6vw, 64px);
+}
+
+.trip-hero p {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 860px) {
+  section { padding: 84px 0; }
+
+  .nav-links {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 32px 24px;
+    border-bottom: 1px solid var(--line);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links li { width: 100%; }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-toggle { display: block; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .trip-grid { grid-template-columns: 1fr; }
+  .bucket-columns { grid-template-columns: 1fr; gap: 32px; }
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-grid.pets { grid-template-columns: repeat(2, 1fr); }
+
+  .counter-block {
+    padding: 24px 18px;
+    gap: 10px;
+  }
+  .counter-stat { min-width: 48px; }
+}

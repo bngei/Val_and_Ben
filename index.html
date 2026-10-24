@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Val &amp; Ben</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩷</text></svg>"
+  >
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="#" class="logo">B &amp; V</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#trips">Trips</a></li>
+      <li><a href="#family">Family</a></li>
+      <li><a href="#bucketlist">Bucket List</a></li>
+      <li><a href="#memories">Memories</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <h1>Valery <em>&amp;</em> Benjamin</h1>
+    <p class="hero-tagline">This is where we keep our story &mdash; every trip, every date, every little thing we still want to do together.</p>
+
+    <div class="counter-block">
+      <div class="counter-stat">
+        <span class="counter-number" id="ct-days">0</span>
+        <span class="counter-label">days</span>
+      </div>
+      <span class="counter-divider">:</span>
+      <div class="counter-stat">
+        <span class="counter-number" id="ct-hours">00</span>
+        <span class="counter-label">hours</span>
+      </div>
+      <span class="counter-divider">:</span>
+      <div class="counter-stat">
+        <span class="counter-number" id="ct-minutes">00</span>
+        <span class="counter-label">minutes</span>
+      </div>
+      <span class="counter-divider">:</span>
+      <div class="counter-stat">
+        <span class="counter-number" id="ct-seconds">00</span>
+        <span class="counter-label">seconds</span>
+      </div>
+    </div>
+    <p class="counter-caption">together and counting</p>
+
+    <div class="hero-dates">
+      <span>First date &middot; Sep 27, 2025</span>
+      <span>Official since &middot; Jan 13, 2026</span>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="section-head-row">
+      <div>
+        <div class="eyebrow">About us</div>
+        <h2 class="section-heading">Where it all started</h2>
+        <p class="section-sub">The dates that got us here, and how far we've come since.</p>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="card-label">FIRST DATE</div>
+        <span class="card-date">September 27, 2025</span>
+        <p>The day we met up for the very first time and figured out we liked each other's company a lot more than we expected.</p>
+      </div>
+      <div class="about-card">
+        <div class="card-label">THE DAY I ASKED HER TO BE MINE</div>
+        <span class="card-date">January 13, 2026</span>
+        <p>The day I asked her to officially be my girlfriend &mdash; and she said yes.</p>
+      </div>
+      <div class="about-card">
+        <div class="card-label">HER BIRTHDAY</div>
+        <span class="card-date">November 25, 2002</span>
+        <p>One of my favorite days of the year, no contest.</p>
+      </div>
+    </div>
+
+    <div class="about-breakdown">
+      <div class="breakdown-item">
+        <span class="num" id="bd-years">0</span>
+        <span class="label">years</span>
+      </div>
+      <div class="breakdown-item">
+        <span class="num" id="bd-months">0</span>
+        <span class="label">months</span>
+      </div>
+      <div class="breakdown-item">
+        <span class="num" id="bd-days">0</span>
+        <span class="label">days</span>
+      </div>
+      <div class="breakdown-item" style="flex: 2; min-width: 200px; text-align: left; display: flex; align-items: center;">
+        <p style="color: var(--ink-soft); font-size: 15px;">...and that's just since we made it official. We're not counting the months before that where we were already basically dating.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIPS -->
+<section id="trips">
+  <div class="wrap">
+    <div class="section-head-row">
+      <div>
+        <div class="eyebrow">Trips</div>
+        <h2 class="section-heading">Everywhere we've been together</h2>
+        <p class="section-sub">Click a city to explore our experience :)</p>
+      </div>
+    </div>
+
+    <div class="trip-grid">
+      <a href="trips/austin.html" class="trip-card austin">
+        <div>
+          <span class="city-name">Austin</span>
+          <span class="view-link">View trip &rarr;</span>
+        </div>
+      </a>
+      <a href="trips/new-york.html" class="trip-card newyork">
+        <div>
+          <span class="city-name">New York</span>
+          <span class="view-link">View trip &rarr;</span>
+        </div>
+      </a>
+      <a href="trips/san-antonio.html" class="trip-card sanantonio">
+        <div>
+          <span class="city-name">San Antonio</span>
+          <span class="view-link">View trip &rarr;</span>
+        </div>
+      </a>
+      <a href="trips/hawaii.html" class="trip-card hawaii">
+        <div>
+          <span class="city-name">Hawaii</span>
+          <span class="view-link">View trip &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY -->
+<section id="family" class="family">
+  <div class="wrap">
+    <div class="section-head-row">
+      <div>
+        <div class="eyebrow">Family</div>
+        <h2 class="section-heading">Our little family</h2>
+        <p class="section-sub">Our two kitties who run the household</p>
+      </div>
+    </div>
+
+    <div class="photo-grid pets filled">
+      <a class="photo-tile" href="Images/Family Images/photo-1" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-1.jpg" alt="Our white tabby cat lounging on the ottoman by the window" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-2.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-2.jpg" alt="Both cats curled up together in the window perch" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-3.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-3.jpg" alt="Our tabby sitting inside a folding wagon" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-4.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-4.jpg" alt="Our black cat sprawled out on the bed" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-5.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-5.jpg" alt="Both cats keeping Valery company while she sleeps" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-6.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-6.jpg" alt="Both cats sitting together on the couch blanket" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-7.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-7.jpg" alt="Our tabby stretched out on the bed with the black cat behind" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-8.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-8.jpg" alt="Our black cat fast asleep bundled in a blanket" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-9.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-9.jpg" alt="Our black cat soaking wet in the bathroom sink after a bath" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-10.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-10.jpg" alt="Valery napping curled up with our tabby" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-11.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-11.jpg" alt="Both cats napping together in the green pet bed" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Family Images/photo-12.jpg" target="_blank" rel="noopener">
+        <img src="Images/Family Images/photo-12.jpg" alt="Both cats eating dinner side by side on the kitchen counter" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BUCKET LIST -->
+<section id="bucketlist" class="bucket">
+  <div class="wrap">
+    <div class="section-head-row">
+      <div>
+        <div class="eyebrow">Bucket list</div>
+        <h2 class="section-heading">Things we've done &amp; things we still want to</h2>
+        <p class="section-sub">A running list of dates, big and small.</p>
+      </div>
+    </div>
+
+    <div class="bucket-progress">
+      <div class="bucket-progress-bar">
+        <div class="bucket-progress-fill" style="width: 38%;"></div>
+      </div>
+      <div class="bucket-progress-label">18 of 48 done</div>
+    </div>
+
+    <div class="bucket-columns">
+      <div class="bucket-col done">
+        <h3>Done together</h3>
+        <ul class="bucket-list">
+          <li><span class="mark">&#10003;</span><span class="text">Photo booth film strips</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Big vacation</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Adopt a cat</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Foster a cat</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Work out together</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Drive-in movies</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Hike</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Road trip</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Amusement park</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Double date</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Skydive</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Pottery</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Stargazing</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Zoo</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Comedy show</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Museum</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Concert</span></li>
+          <li><span class="mark">&#10003;</span><span class="text">Boat day</span></li>
+        </ul>
+      </div>
+      <div class="bucket-col todo">
+        <h3>To-Do</h3>
+        <ul class="bucket-list">
+          <li><span class="mark"></span><span class="text">Picnic</span></li>
+          <li><span class="mark"></span><span class="text">Photo shoot</span></li>
+          <li><span class="mark"></span><span class="text">Bake together</span></li>
+          <li><span class="mark"></span><span class="text">Yoga class</span></li>
+          <li><span class="mark"></span><span class="text">Pilates class</span></li>
+          <li><span class="mark"></span><span class="text">Build a snowman</span></li>
+          <li><span class="mark"></span><span class="text">Commit arson</span></li>
+          <li><span class="mark"></span><span class="text">Go to a festival</span></li>
+          <li><span class="mark"></span><span class="text">Cabin trip</span></li>
+          <li><span class="mark"></span><span class="text">Bowling</span></li>
+          <li><span class="mark"></span><span class="text">Archery class</span></li>
+          <li><span class="mark"></span><span class="text">Axe throwing</span></li>
+          <li><span class="mark"></span><span class="text">Feed ducks at the park</span></li>
+          <li><span class="mark"></span><span class="text">Mini golf</span></li>
+          <li><span class="mark"></span><span class="text">Go to jail</span></li>
+          <li><span class="mark"></span><span class="text">Volunteer at an animal shelter</span></li>
+          <li><span class="mark"></span><span class="text">Roller skating</span></li>
+          <li><span class="mark"></span><span class="text">Paddleboarding</span></li>
+          <li><span class="mark"></span><span class="text">River tubing</span></li>
+          <li><span class="mark"></span><span class="text">Ice skating</span></li>
+          <li><span class="mark"></span><span class="text">International Vacation</span></li>
+          <li><span class="mark"></span><span class="text">Six Flags</span></li>
+          <li><span class="mark"></span><span class="text">Salsa dance class</span></li>
+          <li><span class="mark"></span><span class="text">Fencing</span></li>
+          <li><span class="mark"></span><span class="text">Speakeasy</span></li>
+          <li><span class="mark"></span><span class="text">Mud bath</span></li>
+          <li><span class="mark"></span><span class="text">Topgolf</span></li>
+          <li><span class="mark"></span><span class="text">Rave</span></li>
+          <li><span class="mark"></span><span class="text">High ropes course</span></li>
+          <li><span class="mark"></span><span class="text">Zorbing</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section id="memories">
+  <div class="wrap">
+    <div class="section-head-row">
+      <div>
+        <div class="eyebrow">Memories</div>
+        <h2 class="section-heading">Funny moments, all in one place.</h2>
+        <p class="section-sub">
+            A compilation of funny photos I love and I hope you enjoy as well.
+            <small>I know you hate me hehe</small>
+        </p>
+      </div>
+    </div>
+
+    <div class="photo-grid filled">
+      <a class="photo-tile" href="Images/Funny Images/photo-1.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-1.jpg" alt="Valery taking a huge bite of chocolate cake in front of the microwave" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-2.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-2.jpg" alt="Valery smiling up at the camera from the blue turf" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-3.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-3.jpg" alt="Valery in her I Survived My Trip to NYC shirt on a Manhattan street corner" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-4.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-4.jpg" alt="Valery flopped out on the turf after a workout" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-5.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-5.jpg" alt="Valery in bed grinning next to our black cat" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-6.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-6.jpg" alt="Benjamin and Valery on the boat at Lake Travis" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-7.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-7.jpg" alt="Valery holding our black kitten wrapped in a towel after a bath" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-8.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-8.jpg" alt="Silly close-up of Valery and a friend making faces" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-9.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-9.jpg" alt="Valery giving the camera a look with a towel wrapped around her hair" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-10.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-10.jpg" alt="Valery asleep with our tabby sprawled across her" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-11.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-11.jpg" alt="Valery passed out cold on the bed" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-12.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-12.jpg" alt="Valery ready to dig into a steak dinner" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-13.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-13.jpg" alt="No image" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-14.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-14.jpg" alt="No image" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-15.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-15.jpg" alt="No image" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-16.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-16.jpg" alt="No image" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-17.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-17.jpg" alt="No image" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-18.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-18.jpg" alt="No image" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-19.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-19.jpg" alt="No image" loading="lazy">
+      </a>
+      <a class="photo-tile" href="Images/Funny Images/photo-20.jpg" target="_blank" rel="noopener">
+        <img src="Images/Funny Images/photo-20.jpg" alt="No image" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Benjamin Truong. Built with <span class="heart">&hearts;</span> love.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
